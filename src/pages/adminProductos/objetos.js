@@ -1,7 +1,7 @@
 let publicaciones = [];
 
 const objetosMuestra = [
-    {
+/*     {
         name: 'Body Damon',
         img: '../public/img/Body-Damon.jpg',
         description: 'Conjunto de encaje negro',
@@ -60,7 +60,7 @@ const objetosMuestra = [
         img: '../public/img/Set-Susan.jpg',
         description: 'Conjunto de encaje melón',
         price: '$799.99'
-    },
+    }, */
 ];
 
 function guardarEnLocalStorage() {

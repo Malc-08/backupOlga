@@ -1,7 +1,7 @@
 /* Estilos generales */
 html,
 body {
-  background-color: white;
+  background-color: #FCDCDB;
   padding-bottom: 100px;
 }
 
@@ -70,7 +70,7 @@ p {
 /* Estilos de card personalizado */
 
  .card {
-  background-color: white;
+  background-color: #FCDCDB;
   border: transparent;
 }
 

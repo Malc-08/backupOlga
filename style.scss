@@ -1,9 +1,25 @@
-
-
 /* Estilos generales */
-html, body {
+html,
+body {
   background-color: #FCDCDB;
-  padding-bottom: 100px; 
+  padding-bottom: 100px;
+}
+
+header {
+  background-color: #F5EBD2;
+  padding: 20px;
+  text-align: center;
+}
+
+#header-olga h1 {
+  font-family: "Playfair Display", serif;
+  margin-top: 10px;
+}
+
+#header-olga p {
+  font-family: "Source Sans 3", sans-serif;
+  text-align: center;
+  font-size: 25px;
 }
 
 
@@ -20,25 +36,41 @@ html, body {
   height: auto;
 }
 
-@media (max-width: 768px) {
-  .logo-olga {
-    width: 100%;
-    max-width: 90vw; /* Ajusta el ancho para dispositivos móviles */
-  }
-}
 
 /* Nueva sección: ¿Tienes dudas? */
+
+.contact-section-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FCDCDB;
+  padding: 20px 0;
+}
+
 .contact-section {
   background-color: #FCDCDB;
-  padding: 50px 0;
-  text-align: center;
+  padding: 10px;
+  text-align: center; /* Cambiado a center para centrar el texto */
 }
 
 .section-title {
   font-family: "Playfair Display", serif;
   font-size: 2.5em;
-  margin-bottom: 20px;
+  margin-top: 50px;
   color: #464445;
+}
+
+#body-text {
+  font-family: "Playfair Display", serif;
+  padding: 20px 0;
+  font-size: 30px;
+  text-align: center; /* Cambiado a center para centrar el texto */
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
 }
 
 .contact-button {
@@ -46,42 +78,98 @@ html, body {
   border: none;
   color: #4A0125;
   padding: 15px 30px;
-  font-size: 1.2em;
+  font-size: 1.5em;
   font-weight: 500;
   cursor: pointer;
   border-radius: 5px;
-  /* margin-bottom: 30px; */
-  margin-left: auto;
-  margin-right: auto;
   display: inline-block;
-  text-decoration: none; /* Asegúrate de que el texto del enlace no tenga subrayado */
+  text-decoration: none;
 }
 
 .contact-button:hover {
   background-color: #d79ae4;
 }
 
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 10px 0;
+  }
+
+  .section-title {
+    font-size: 2em;
+    margin-top: 20px;
+  }
+
+  #body-text {
+    font-size: 20px;
+  }
+
+  .contact-button {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+}
+
+/* Estilos de carrusel de imágenes */
 .review-carousel {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 30px; /* Añade margen superior para separar el carrusel del botón */
+  margin-top: 100px;
 }
 
 .carousel-images {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: auto;
+  max-width: 100%;
+  padding: 10px;
 }
 
 .carousel-image {
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
   object-fit: cover;
-  margin: 0 10px;
+  margin: 5px;
   border-radius: 10px;
+  transition: all 0.3s ease;
 }
 
+#imageLeft {
+  margin-top: 500px;
+  max-width: 200px;
+  flex: 1;
+}
+
+#imageRight {
+  margin-bottom: 500px;
+  max-width: 200px;
+  flex: 1;
+}
+
+#imageFront {
+  max-width: 400px;
+  flex: 2;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+  .carousel-image {
+    max-width: 100%;
+    margin: 10px 0;
+  }
+
+  #imageLeft, #imageRight, #imageFront {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+/* Reseñas del cliente */
 .carousel-reviews {
   display: flex;
   justify-content: center;
@@ -146,13 +234,15 @@ h5 {
   font-size: 10px;
 }
 
-h4, h3, h2 {
+h4,
+h3,
+h2 {
   font-family: "Playfair Display", serif;
   text-align: center;
 }
 
 h2 {
-  text-align: justify; 
+  text-align: justify;
 }
 
 p {
@@ -163,7 +253,7 @@ p {
 
 /* Estilos del navbar personalizado */
 .custom-navbar {
-  background-color: rgb(245, 235, 210, .5);
+  background-color: rgb(245, 235, 210);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -173,10 +263,11 @@ p {
 
 .navbar-nav .nav-link {
   color: #4b4949 !important;
-  font-size: 18px !important; 
+  font-size: 18px !important;
   font-weight: normal !important;
   padding: 10px 15px !important;
-  font-family: "Playfair Display", serif !important; /* Agregar */
+  font-family: "Playfair Display", serif !important;
+  /* Agregar */
 }
 
 .navbar-nav .nav-link:hover {
@@ -186,11 +277,12 @@ p {
 
 @media (max-width: 992px) {
   .navbar-nav {
-      flex-direction: column; 
+    flex-direction: column;
   }
+
   .navbar-nav .nav-link {
-      text-align: center; 
-      padding: 10px 0; 
+    text-align: center;
+    padding: 10px 0;
   }
 }
 
@@ -206,7 +298,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 70px; 
+  height: 70px;
 }
 
 .policy {

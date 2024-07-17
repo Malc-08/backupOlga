@@ -250,19 +250,6 @@ p {
   height: 100%;
 }
 
-.social-icons {
-  margin-top: 10px;
-}
-
-.social-icons a {
-  color: #000; /* Cambia el color según tus preferencias */
-  font-size: 24px; /* Tamaño del icono */
-  margin-right: 10px; /* Espacio entre iconos */
-}
-
-.social-icons a:hover {
-  color: pink; /* Color al pasar el ratón por encima (ejemplo para LinkedIn) */
-}
 
 .icon-linkedin,.icon-github {
 color: #000; /* Color de los iconos */

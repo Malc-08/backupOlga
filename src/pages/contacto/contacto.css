@@ -41,7 +41,7 @@ body, html {
 
 /* Estilo del cuerpo con imagen de fondo */
 body {
-    background: url('background.jpg') no-repeat center center fixed;
+    background: url('/public/img/IMG_fondoContac.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 

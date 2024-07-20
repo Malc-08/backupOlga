@@ -1,0 +1,295 @@
+/* Estilos generales */
+html,
+body {
+  padding-bottom: 100px;
+}
+
+/* Estilos para encabezados y párrafos */
+h6 {
+  font-size: 15px;
+  text-align: justify;
+  font-family: "Source Sans 3", sans-serif;
+}
+
+h5 {
+  font-size: 10px;
+}
+
+h4,
+h3,
+h2 {
+  font-family: "Playfair Display", serif;
+  text-align: left;
+}
+
+h2 {
+  font-family: "Playfair Display", serif;
+  text-align: justify;
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+}
+
+
+p {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 16px;
+  text-align: left;
+}
+
+/* Estilos del navbar personalizado */
+.custom-navbar {
+  background-color: #F5EBD2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand img {
+  max-height: 50px;
+}
+
+.navbar-nav .nav-link {
+  color: #4b4949 !important;
+  font-size: 18px !important;
+  font-weight: normal !important;
+  padding: 10px 15px !important;
+  font-family: "Playfair Display", serif !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: black !important;
+  text-decoration: none !important;
+}
+
+@media (max-width: 992px) {
+  .navbar-nav {
+    flex-direction: column;
+  }
+
+  .navbar-nav .nav-link {
+    text-align: center;
+    padding: 10px 0;
+  }
+}
+
+/* Estilos básicos para el proceso de checkout */
+
+.container {
+    max-width: 500px;
+    margin: 90px auto 0 !important;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.checkout-step {
+    display: none;
+    margin-bottom: 20px;
+}
+
+.checkout-step.active {
+    display: block;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: bold;
+    display: block;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.order-summary {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.order-summary h4 {
+    margin-bottom: 10px;
+}
+
+.order-summary ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.order-summary ul li {
+    margin-bottom: 10px;
+}
+
+.error-message {
+    color: red;
+    margin-top: 5px;
+}
+
+.checkout-steps {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.checkout-steps button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.checkout-steps button:hover {
+    background-color: #f0f0f0;
+}
+
+#confirmation-message {
+    display: none; 
+    background-color: #df24f0;
+    color: black;
+    border: 1px solid rgb(53, 2, 53);
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.btn-primary {
+  background-color: #df24f0 !important;
+  border-color: #df24f0 !important;
+}
+
+.btn-primary:hover {
+  background-color: rgb(53, 2, 53) !important; 
+  border-color: rgb(53, 2, 53) !important; 
+}
+
+.custom-list {
+  list-style-type: none; 
+  padding: 0; 
+  text-align: left;
+}
+
+.no-spacing p { 
+  margin: 0;
+}
+
+.payment-icon {
+  display: inline-block;
+  width: 20px;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.nav-tabs .nav-link {
+  cursor: pointer;
+}
+
+.tab-content {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.active {
+  display: block;
+}
+
+.payment-method-icons {
+  display: flex;
+  gap: 10px; 
+}
+
+.payment-method {
+  display: flex;
+  align-items: center;
+}
+
+.payment-method input[type="radio"] {
+  margin-right: 5px;
+}
+
+/* Estilo para ajustar el diseño en pantallas pequeñas */
+@media (max-width: 768px) {
+  .container {
+      padding: 10px;
+  }
+
+  .card-img {
+      max-width: 80px;
+  }
+}
+
+/* Estilos del footer personalizado */
+.custom-footer {
+  background-color: rgb(53, 2, 53);
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 5px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+.policy {
+  background-color: rgb(80, 2, 80);
+  color: white;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.policy a {
+  color: white;
+  text-decoration: none;
+}
+
+.policy a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+}
+
+.social-icons a {
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+  display: inline-block;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.social-icons a:hover {
+  color: #df24f0;
+}
+
+.copyright {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+  height: 100%;
+}

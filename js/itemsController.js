@@ -4,12 +4,13 @@ class ItemsController {
         this.currentId = currentId;
     }
 
-    addItem(name, description, imageUrl, price) {
+    addItem(name, description, imageUrl, hoverImageUrl, price) {
         const item = {
             id: this.currentId++,
             name: name,
             description: description,
             imageUrl: imageUrl,
+            hoverImageUrl: hoverImageUrl,
             price: price
         };
         this.items.push(item);
@@ -20,7 +21,7 @@ class ItemsController {
         if (storageItems) {
             const items = JSON.parse(storageItems);
             items.forEach(item => {
-                this.addItem(item.name, item.description, item.imageUrl, item.price);
+                this.addItem(item.name, item.description, item.imageUrl, item.hoverImageUrl, item.price);
             });
         }
     }
@@ -30,7 +31,6 @@ class ItemsController {
     }
 }
 
-// Exportar la clase si es necesario
 export { ItemsController };
 
 

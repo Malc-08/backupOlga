@@ -254,11 +254,12 @@ p {
 .icon-linkedin,.icon-github {
 color: #000; /* Color de los iconos */
 margin-right: 10px; /* Espacio entre iconos */
-
+font-size: 25px;
 text-decoration: none; /* Eliminar subrayado */
 }
 .icon-linkedin:hover {
 color: white; /* Color al pasar el ratón por encima para LinkedIn */
+
 }
 .icon-github:hover {
 color: white; /* Color al pasar el ratón por encima para GitHub */

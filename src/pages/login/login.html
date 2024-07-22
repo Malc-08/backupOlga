@@ -1,30 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <link rel="icon" href="/public/img/logo-olga-franco-lenceria.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Olga Franco Lenceria</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!--Fuentes -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    <!-- Fuentes -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
         rel="stylesheet">
 
     <!-- Estilos CSS personalizados -->
     <link rel="stylesheet" href="./login.css">
 
-     <!-- Font Awesome (librería para las redes sociales) -->
+    <!-- Font Awesome (librería para las redes sociales) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
 </head>
 
 <body>
@@ -32,10 +27,10 @@
     <nav class="navbar navbar-expand-lg navbar-light custom-navbar fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img id="logo" src="../../../public/img/logo-olga-franco-lenceria.png" alt="logo-olga-franco-lenceria"
-                    class="mr-3">
+                <img id="logo" src="../../../public/img/logo-olga-franco-lenceria.png"
+                    alt="logo-olga-franco-lenceria" class="mr-3">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" por
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -46,7 +41,7 @@
                         <a class="nav-link" href="../../../index.html">Inicio</a>
                     </li>
                     <li class="nav-item text-center">
-                        </b><a class="nav-link" href="../acercaDeNosotros/acercadenosotros.html">Conóceme</a>
+                        <a class="nav-link" href="../acercaDeNosotros/acercadenosotros.html">Conóceme</a>
                     </li>
                     <li class="nav-item text-center">
                         <a class="nav-link" href="../productos/productos.html">Productos</a>
@@ -60,26 +55,91 @@
                     <li class="nav-item text-center">
                         <a class="nav-link" href="../adminProductos/objetos.html">AdminProducto</a>
                     </li>
+                    <li class="nav-item text-center">
+                        <a class="nav-link" href="../cart/cart.html"><i class="fas fa-shopping-cart"></i></a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6 mb-4 custom-padding">
+                <h2 class="text-center">¡Crea una cuenta!</h2>
+                <div class="section-sinaloa">
+                    <h3>Ingrese su información para continuar. Si ya tiene una cuenta, inicie sesión..</h3>
+                    <form id="contactForm" novalidate>
+                        <div class="rounded-box">
+                            <div class="mb-3">
+                                <label for="fullName" class="form-label">Nombre completo</label>
+                                <div class="position-relative">
+                                    <i class="fas fa-user form-icon"></i>
+                                    <input type="text" class="form-control form-control-with-icon" id="fullName"
+                                        placeholder="Olga Franco" required>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Número de teléfono</label>
+                                <div class="position-relative">
+                                    <i class="fas fa-phone form-icon"></i>
+                                    <input type="text" class="form-control form-control-with-icon" id="phone"
+                                        placeholder="5564342789" required>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email (nombre de usuario)</label>
+                                <div class="position-relative">
+                                    <i class="fas fa-envelope form-icon"></i>
+                                    <input type="email" class="form-control form-control-with-icon" id="email"
+                                        placeholder="olgafranco@email.com" required>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Contraseña</label>
+                                <input type="password" class="form-control" id="password" placeholder="Máx 8 caracteres, incl. !@# y números" required>
+                            </div>
+
+
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Confirmacion de contraseña</label>
+                                <input type="password" class="form-control" id="password" placeholder="Ingrece nuevamente su contraseña" required>
+                            </div>
+
+                        </div>
+
+                        <div class="mb-3 form-check">
+
+                            <input type="checkbox" class="form-check-input" id="privacyCheck" required>
+                            <label class="form-check-label" for="privacyCheck">He leído el aviso de privacidad</label>
+                        </div>
+
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Crea una cuenta</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
-    <footer class="custom-footer">
-        <div class="container-fluid"> 
+    <footer class="container-fluid custom-footer">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col"> 
+                <div class="col">
                     <div class="copyright">
                         <h5 class="text-left">&copy; 2024 Olga Franco Lencería - Todos los derechos reservados</h5>
                     </div>
                 </div>
-                <div class="col"> 
+                <div class="col">
                     <div class="social-icons">
                         <a href="https://wa.me/message/R75D7YSZZ7HFC1"><i class="fab fa-whatsapp"></i></a>
-                        <a href="https://www.instagram.com/olga_franco_lenceria/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/olga_franco_lenceria/"><i
+                                class="fab fa-instagram"></i></a>
                         <a href="mailto:olga_francogutierrez@hotmail.com"><i class="far fa-envelope"></i></a>
                     </div>
                 </div>
@@ -98,8 +158,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-     <!-- Script personalizado para animación -->
-        <script src="script.js"></script>
+    <!-- Script personalizado para la validación y envío del formulario -->
+    <script src="./login.js"></script>
 </body>
 
 </html>
+

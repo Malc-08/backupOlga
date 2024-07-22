@@ -41,7 +41,7 @@ body, html {
 
 /* Estilo del cuerpo con imagen de fondo */
 body {
-    background: url('background.jpg') no-repeat center center fixed;
+    background: url('/public/img/IMG_fondoContac.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -237,4 +237,44 @@ h5 {
 .my-5 {
     margin-top: 5rem;
     margin-bottom: 5rem;
+}
+
+/* Estilos para mensajes de error y éxito */
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.alert-warning {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+/* Estilo personalizado para mensajes en color lila */
+.alert-lila {
+    color: #4a235a;
+    background-color: #f3e5f5;
+    border-color: #dcd0e1;
+}
+
+/* Estilo para el mensaje de éxito */
+.alert-success-lila {
+    color: #4a235a;
+    background-color: #dcd0e1;
+    border-color: #c1b6ce;
 }

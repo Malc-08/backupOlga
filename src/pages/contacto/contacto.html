@@ -60,6 +60,9 @@
                     <li class="nav-item text-center">
                         <a class="nav-link" href="../adminProductos/objetos.html">AdminProducto</a>
                     </li>
+                    <li class="nav-item text-center">
+                        <a class="nav-link" href="../cart/cart.html"><i class="fas fa-shopping-cart"></i></a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -129,9 +132,24 @@
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
                     <label class="form-check-label" for="exampleCheck1">He leído el aviso de privacidad</label>
                 </div>
+                    <!--Mensajes de error al llenar formulario-->
+
+                    <div id="error-message" class="alert alert-warning alert-lila my-2" role="alert" style="display: none;"></div>
+                    <div id="post-error-message" class="alert alert-danger alert-lila my-2" role="alert" style="display: none;"></div>
+
+                    
                 <div class="text-center">
                     <button type="submit" class="btn btn-primary">Obtén descuento</button>
                 </div>
+
+                <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+                <script type="text/javascript">
+                (function() {
+                emailjs.init("eToDepjFcMp--P6CW");
+                })();
+                </script>
+
+
                 </form>
             </div>
         </div>

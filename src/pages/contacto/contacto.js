@@ -83,10 +83,10 @@ function validatePhone(phone) {
 
 function postContactForm(formData) {
     (function() {
-        emailjs.init("eToDepjFcMp--P6CW"); // Reemplaza "YOUR_PUBLIC_KEY" con la Public Key que copiaste
+        emailjs.init("eToDepjFcMp--P6CW"); 
     })();
 
-    emailjs.send("service_uzjz2mc", "template_nlhxwj7", formData) // Reemplaza con tu Service ID y Template ID de EmailJS
+    emailjs.send("service_uzjz2mc", "template_nlhxwj7", formData) 
         .then(function(response) {
             console.log('SUCCESS!', response.status, response.text);
             showSuccessMessage();

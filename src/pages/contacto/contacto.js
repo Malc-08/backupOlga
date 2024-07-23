@@ -110,7 +110,8 @@ function postContactForm() {
     };
 
     (function() {
-        emailjs.init("eToDepjFcMp--P6CW"); 
+        emailjs.init("eToDepjFcMp--P6CW"); // Reemplaza "YOUR_PUBLIC_KEY" con la Public Key que copiaste
+    })();
     
 
     emailjs.send("service_uzjz2mc","template_nlhxwj7" ,templateParams)

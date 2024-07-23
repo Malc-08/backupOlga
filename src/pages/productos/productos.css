@@ -42,6 +42,10 @@ p {
   max-height: 50px;
 }
 
+.active {
+  text-decoration: underline #AD8D8C 5px;
+}
+
 .navbar-nav .nav-link {
   color: #4b4949 !important;
   font-size: 18px !important;

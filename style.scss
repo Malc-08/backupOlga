@@ -50,7 +50,8 @@ header {
 .contact-section {
   background-color: #FCDCDB;
   padding: 10px;
-  text-align: center; /* Cambiado a center para centrar el texto */
+  text-align: center;
+  /* Cambiado a center para centrar el texto */
 }
 
 .section-title {
@@ -64,7 +65,8 @@ header {
   font-family: "Playfair Display", serif;
   padding: 20px 0;
   font-size: 30px;
-  text-align: center; /* Cambiado a center para centrar el texto */
+  text-align: center;
+  /* Cambiado a center para centrar el texto */
 }
 
 .button-container {
@@ -111,63 +113,91 @@ header {
   }
 }
 
-/* Estilos de carrusel de imágenes */
-.review-carousel {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 100px;
+/* Imágenes container */
+
+.tokio {
+  width: 300px;
+  height: 350px;
+  object-fit: cover;
+  object-position: bottom;
+  padding: 5px;
+  border-radius: 15px;
+  transition: opacity .5s;
 }
 
-.carousel-images {
+.tokio:hover {
+  cursor: pointer;
+  opacity: .5;
+}
+
+#setName {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.image-container {
+  position: relative;
+  margin: 5px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(245, 235, 210, 0.5);
+  font-family: "Playfair Display", bold;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  margin: auto;
-  max-width: 100%;
-  padding: 10px;
+  color: #464445;
+  font-size: 30px;
+  border-radius: 15px;
 }
 
-.carousel-image {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  object-fit: cover;
-  margin: 5px;
-  border-radius: 10px;
-  transition: all 0.3s ease;
+.image-container:hover .overlay {
+  opacity: 1;
 }
 
-#imageLeft {
-  margin-top: 500px;
-  max-width: 200px;
-  flex: 1;
+.image-container a {
+  display: block;
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  text-decoration: none;
 }
 
-#imageRight {
-  margin-bottom: 500px;
-  max-width: 200px;
-  flex: 1;
+.image-container a:hover {
+  text-decoration: none;
 }
 
-#imageFront {
-  max-width: 400px;
-  flex: 2;
-}
-
-/* Estilos para pantallas pequeñas */
+/* Media Queries */
 @media (max-width: 768px) {
+  /*   .carousel-images {
+    flex-direction: column;
+  }
+
   .carousel-image {
-    max-width: 100%;
+    margin: 10px 0;
+  } */
+
+  .carousel-reviews {
+    flex-direction: column;
+  }
+
+  .review-card {
     margin: 10px 0;
   }
-
-  #imageLeft, #imageRight, #imageFront {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
 }
+
 
 /* Reseñas del cliente */
 .carousel-reviews {
@@ -201,24 +231,6 @@ header {
   color: gold;
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-  .carousel-images {
-    flex-direction: column;
-  }
-
-  .carousel-image {
-    margin: 10px 0;
-  }
-
-  .carousel-reviews {
-    flex-direction: column;
-  }
-
-  .review-card {
-    margin: 10px 0;
-  }
-}
 
 
 

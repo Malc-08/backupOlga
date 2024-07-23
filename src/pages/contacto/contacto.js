@@ -1,5 +1,5 @@
 // Referencias para formulario
-const contactForm = document.forms["contactForm"]
+const contactForm = document.forms["contactForm"];
 
 contactForm.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -7,9 +7,9 @@ contactForm.addEventListener("submit", (event) => {
     // Referencia de inputs
     const emailRef = contactForm.elements["email"];
     const fullNameRef = contactForm.elements["fullName"];
-    const phoneRef = contactForm.elements["phone"]
+    const phoneRef = contactForm.elements["phone"];
     const commentsRef = contactForm.elements["comments"];
-    const termsandCondictionsRef = contactForm.elements["exampleCheck1"]
+    const termsandCondictionsRef = contactForm.elements["exampleCheck1"];
 
     // Sanitizar los datos
     emailRef.value = emailRef.value.trim().toLowerCase();
@@ -24,7 +24,7 @@ contactForm.addEventListener("submit", (event) => {
         phone: phoneRef.value,
         comments: commentsRef.value,
         termsandCondictions: termsandCondictionsRef.checked
-    }
+    };
     console.table(formData);
 
     // Validar los datos del formulario
@@ -32,8 +32,7 @@ contactForm.addEventListener("submit", (event) => {
 
     if (results.isValid) {
         try {
-            postContactForm();
-            
+            postContactForm(formData);
         } catch (error) {
             const errorMessage = document.getElementById("post-error-message");
             errorMessage.innerHTML = "Error al enviar el formulario. Inténtalo de nuevo.";
@@ -82,39 +81,12 @@ function validatePhone(phone) {
     return re.test(phone);
 }
 
-function postContactForm() {
-    // Simular envío de formulario
-    //console.log("Formulario enviado correctamente");
-}
-
-
-
-
-
-
-function showSuccessMessage() {
-    const successMessage = document.createElement("div");
-    successMessage.className = "alert alert-success alert-success-lila my-2";
-    //successMessage.innerHTML = "¡Formulario enviado correctamente!";
-    contactForm.appendChild(successMessage);
-    setTimeout(() => successMessage.remove(), 5000);
-}
-
-
-function postContactForm() {
-    const templateParams = {
-        fullName: contactForm.elements["fullName"].value,
-        email: contactForm.elements["email"].value,
-        phone: contactForm.elements["phone"].value,
-        comments: contactForm.elements["comments"].value
-    };
-
+function postContactForm(formData) {
     (function() {
         emailjs.init("eToDepjFcMp--P6CW"); // Reemplaza "YOUR_PUBLIC_KEY" con la Public Key que copiaste
     })();
-    
 
-    emailjs.send("service_uzjz2mc","template_nlhxwj7" ,templateParams)
+    emailjs.send("service_uzjz2mc", "template_nlhxwj7", formData) // Reemplaza con tu Service ID y Template ID de EmailJS
         .then(function(response) {
             console.log('SUCCESS!', response.status, response.text);
             showSuccessMessage();
@@ -127,26 +99,11 @@ function postContactForm() {
         });
 }
 
-if (results.isValid) {
-    try {
-        postContactForm();
-    } catch (error) {
-        const errorMessage = document.getElementById("post-error-message");
-        //errorMessage.innerHTML = "Error al enviar el formulario. Por favor, inténtalo de nuevo.";
-        //errorMessage.style.display = "block";
-        setTimeout(() => errorMessage.style.display = "none", 5000);
-    }
-} else {
-    const errorMessage = document.getElementById("error-message");
-    errorMessage.innerHTML = results.error;
+function showError(elementId, message) {
+    const errorMessage = document.getElementById(elementId);
+    errorMessage.innerHTML = message;
     errorMessage.style.display = "block";
     setTimeout(() => errorMessage.style.display = "none", 5000);
-}
-
-
-
-function resetForm() {
-    contactForm.reset();
 }
 
 function showSuccessMessage() {
@@ -158,4 +115,8 @@ function showSuccessMessage() {
         successMessage.remove();
         resetForm();
     }, 3000);
-};
+}
+
+function resetForm() {
+    contactForm.reset();
+}

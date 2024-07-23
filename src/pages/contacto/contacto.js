@@ -141,6 +141,8 @@ if (results.isValid) {
     errorMessage.style.display = "block";
     setTimeout(() => errorMessage.style.display = "none", 5000);
 }
+}
+
 
 function resetForm() {
     contactForm.reset();
@@ -156,4 +158,3 @@ function showSuccessMessage() {
         resetForm();
     }, 3000);
 };
-

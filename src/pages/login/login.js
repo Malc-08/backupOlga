@@ -1,71 +1,57 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('contactForm');
-    const fullName = document.getElementById('fullName');
-    const phone = document.getElementById('phone');
-    const email = document.getElementById('email');
-    const password = document.getElementById('password');
-    const confirmPassword = document.getElementById('password');
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("contactForm");
 
-    const validateFullName = (name) => {
-        const regex = /^[a-zA-Z\s]{2,50}$/;
-        return regex.test(name);
-    };
-
-    const validatePhone = (phone) => {
-        const regex = /^\d{10}$/;
-        return regex.test(phone);
-    };
-
-    const validateEmail = (email) => {
-        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return regex.test(email);
-    };
-
-    const validatePassword = (password) => {
-        const regex = /^(?=.*\d)(?=.*[!@#])[A-Za-z\d!@#]{1,8}$/;
-        return regex.test(password);
-    };
-
-    form.addEventListener('submit', (event) => {
-        event.preventDefault();
-
-        if (!validateFullName(fullName.value)) {
-            alert('Nombre completo no válido. Debe contener solo letras y espacios, y tener entre 2 y 50 caracteres.');
-            return;
-        }
-
-        if (!validatePhone(phone.value)) {
-            alert('Número de teléfono no válido. Debe contener exactamente 10 dígitos.');
-            return;
-        }
-
-        if (!validateEmail(email.value)) {
-            alert('Email no válido.');
-            return;
-        }
-
-        if (!validatePassword(password.value)) {
-            alert('Contraseña no válida. Debe tener un máximo de 8 caracteres e incluir al menos un número y un carácter especial (!@#).');
-            return;
-        }
-
-        if (password.value !== confirmPassword.value) {
-            alert('Las contraseñas no coinciden.');
-            return;
-        }
-
-        const user = {
-            fullName: fullName.value,
-            phone: phone.value,
-            email: email.value,
-            password: password.value
-        };
-
-        let users = JSON.parse(localStorage.getItem('users')) || [];
-        users.push(user);
-        localStorage.setItem('users', JSON.stringify(users));
-
-        alert('Cuenta creada exitosamente.');
-        form.reset();
+    // Función para mostrar/ocultar la contraseña
+    const togglePassword = document.getElementById("togglePassword");
+    const passwordField = document.getElementById("password");
+    togglePassword.addEventListener("click", function() {
+        const type = passwordField.type === "password" ? "text" : "password";
+        passwordField.type = type;
+        this.classList.toggle("fa-eye-slash");
     });
+
+    // Validación y almacenamiento en local storage
+    form.addEventListener("submit", function(event) {
+        event.preventDefault(); // Previene el envío del formulario
+
+        // Obtener los valores de los campos
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value.trim();
+
+        // Expresiones regulares para validar los campos
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const passwordRegex = /^(?=.*\d)(?=.*[!@#])[A-Za-z\d!@#]{6,20}$/;
+
+        // Validar el correo electrónico
+        if (!emailRegex.test(email)) {
+            alert("Por favor, introduce un correo electrónico válido.");
+            return;
+        }
+
+        // Validar la contraseña
+        if (!passwordRegex.test(password)) {
+            alert("Contraseña no válida. Debe tener entre 6 y 20 caracteres e incluir al menos un número y un carácter especial (!@#).");
+            return;
+        }
+
+        // Almacenar datos de usuario en el local storage
+        const users = JSON.parse(localStorage.getItem('users')) || [];
+        if (!users.some(user => user.email === email)) {
+            users.push({ email: email, password: password });
+            localStorage.setItem('users', JSON.stringify(users));
+        } else {
+            alert("El usuario ya está registrado.");
+            return;
+        }
+
+        // Mostrar mensaje de éxito
+        alert("Datos guardados con éxito.");
+        form.reset(); // Opcional: limpiar el formulario después de enviar
+    });
+
+    // Verificar autenticación (puedes usar esto en otras páginas para verificar si el usuario está registrado)
+    function authenticateUser(email, password) {
+        const users = JSON.parse(localStorage.getItem('users')) || [];
+        return users.some(user => user.email === email && user.password === password);
+    }
 });

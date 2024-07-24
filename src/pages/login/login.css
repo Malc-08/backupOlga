@@ -16,7 +16,7 @@ body, html {
 }
 
 .text-center {
- color: rgb(1, 3, 4);
+ color: rgb(245, 248, 250);
 }
 
 .form-check-label {
@@ -25,10 +25,6 @@ body, html {
 
 .navbar-brand img {
   max-height: 50px;
-}
-
-.active {
-  text-decoration: underline #AD8D8C 5px;
 }
 
 .navbar-nav .nav-link {
@@ -55,11 +51,41 @@ body, html {
 }
 
 body {
-  background: url('/public/img/fondo1log.jpg') no-repeat center center fixed;
+  background: url('/public/img/login1.jpg') no-repeat center center fixed;
   background-size: cover;
 }
 
+/* Estilo para el mensaje de carga */
+.mensaje-carga{
+  display: none; /* Inicialmente oculto */
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #d9edf7; /* Color de fondo */
+  border: 1px solid #bce8f1; /* Borde */
+  border-radius: 5px; /* Bordes redondeados */
+  }
 
+  /* Estilo para el icono de ojo */
+  .field-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  .Subrayado-1 {
+    color: black; /* Define el color del texto */
+    text-decoration: underline; /* Subraya el texto */
+    text-decoration-color: black; /* Color del subrayado */
+}
+
+
+  .Dirigir-1 {
+    color: black;
+  }
 /* Estilo del cuerpo con imagen de fondo */
 .background {
   position: fixed;
@@ -67,7 +93,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/public/img/fondo1log.jpg');
+  background-image: url('/public/img/login1.jpg');
   background-size: cover;
   background-position: center;
   filter: blur(3px); /* Ajusta el valor del desenfoque */

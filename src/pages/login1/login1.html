@@ -16,11 +16,12 @@
         rel="stylesheet">
 
     <!-- Estilos CSS personalizados -->
-    <link rel="stylesheet" href="./login.css">
+    <link rel="stylesheet" href="./login1.css">
 
     <!-- Font Awesome (librería para las redes sociales) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
+
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light custom-navbar fixed-top">
@@ -65,42 +66,69 @@
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-6 mb-4 custom-padding">
-                <h2 class="text-center">Login</h2>
+                <h2 class="text-center">¡Crea una cuenta!</h2>
                 <div class="section-sinaloa">
-                    <h3>Si tiene una cuenta con nosotros, inicie sesión..</h3>
+                    <h3>Ingrese su información para continuar. Si ya tiene una cuenta, inicie sesión..</h3>
                     <form id="contactForm" novalidate>
-                        <!-- Formulario de login -->
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email (nombre de usuario)</label>
-                            <div class="position-relative">
-                                <i class="fas fa-envelope form-icon"></i>
-                                <input type="email" class="form-control form-control-with-icon" id="email"
-                                    placeholder="olgafranco@email.com" required>
+                        <div class="rounded-box">
+                            <div class="mb-3">
+                                <label for="fullName" class="form-label">Nombre completo</label>
+                                <div class="position-relative">
+                                    <i class="fas fa-user form-icon"></i>
+                                    <input type="text" class="form-control form-control-with-icon" id="fullName"
+                                        placeholder="Olga Franco" required>
+                                </div>
                             </div>
+
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Número de teléfono</label>
+                                <div class="position-relative">
+                                    <i class="fas fa-phone form-icon"></i>
+                                    <input type="text" class="form-control form-control-with-icon" id="phone"
+                                        placeholder="5564342789" required>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email (nombre de usuario)</label>
+                                <div class="position-relative">
+                                    <i class="fas fa-envelope form-icon"></i>
+                                    <input type="email" class="form-control form-control-with-icon" id="email"
+                                        placeholder="olgafranco@email.com" required>
+                                </div>
+                            </div>
+
+                            <div class="mb-3 position-relative">
+                                <label for="password" class="form-label">Contraseña</label>
+                                <div class="input-group">
+                                    <input type="password" class="form-control" id="password"
+                                        placeholder="Máx 8 caracteres, incl. letras, números y !@#" required>
+                                    <span class="input-group-text field-icon toggle-password" id="togglePassword">
+                                
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="mb-3 position-relative">
+                                <label for="password-confirm" class="form-label">Confirmación de contraseña</label>
+                                <div class="input-group">
+                                    <input type="password" class="form-control" id="password-confirm"
+                                        placeholder="Ingrese nuevamente su contraseña" required>
+                                    <span class="input-group-text field-icon toggle-password" id="togglePasswordConfirm">
+                                    
+                                    </span>
+                                </div>
+                            </div>
+
                         </div>
 
-                        <div class="mb-3 position-relative">
-                            <label for="password" class="form-label">Contraseña</label>
-                            <div class="input-group">
-                                <input type="password" class="form-control" id="password"
-                                    placeholder="Máx 8 caracteres, incl. letras, números y !@#" required>
-                                <span class="input-group-text field-icon toggle-password" id="togglePassword">
-                                    <i class="fa fa-eye" aria-hidden="true"></i>
-                                </span>
-                            </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="privacyCheck" required>
+                            <label class="form-check-label" for="privacyCheck">He leído el aviso de privacidad</label>
                         </div>
-
-                        <h3 class="Subrayado-1">¿No tienes cuenta? <a class="Dirigir-1" href="../login1/login1.html"> Crea una cuenta</a></h3>
-                        <h3 class="Subrayado-1"><a class="Dirigir-1" href="../login2/login2.html">¿Olvidaste tu contraseña?</a></h3>
 
                         <div class="text-center">
-                            <!-- Botón de iniciar sesión -->
-                            <button id="btnIniciarSesion" type="submit" class="btn btn-primary">Iniciar sesión<a href="../../../index.html"></a></button>
-
-                            <!-- Mensaje de carga -->
-                            <div id="mensajeCarga" class="mensaje-carga">
-                                Cargando...
-                            </div>
+                            <button type="submit" class="btn btn-primary">Crea una cuenta</button>
                         </div>
                     </form>
                 </div>
@@ -120,7 +148,8 @@
                 <div class="col">
                     <div class="social-icons">
                         <a href="https://wa.me/message/R75D7YSZZ7HFC1"><i class="fab fa-whatsapp"></i></a>
-                        <a href="https://www.instagram.com/olga_franco_lenceria/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/olga_franco_lenceria/"><i
+                                class="fab fa-instagram"></i></a>
                         <a href="mailto:olga_francogutierrez@hotmail.com"><i class="far fa-envelope"></i></a>
                     </div>
                 </div>
@@ -139,6 +168,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-        <script src="./login.js"></script>
+    <!-- Script personalizado para la validación y envío del formulario -->
+    <script src="./login1.js"></script>
 </body>
+
 </html>

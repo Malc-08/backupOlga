@@ -42,7 +42,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav d-flex justify-content-around w-100">
-                    <li class="nav-item text-center active">
+                    <li id="activeI" class="nav-item text-center active">
                         <a class="nav-link" href="./index.html">Inicio</a>
                     </li>
                     <li class="nav-item text-center">
@@ -101,78 +101,150 @@
                 <div class="image-container">
                     <a href="/src/pages/productos/productos.html">
                         <img src="/public/img/tokioI.jpg" alt="Image 1" class="tokio" loading="lazy">
-                        <div class="overlay">Ver en productos</div>
+                        <div class="overlay">Ver productos</div>
                     </a>
                 </div>
                 <div class="image-container">
                     <a href="/src/pages/productos/productos.html">
                         <img src="/public/img/tokioC.jpg" alt="Image 2" class="tokio" loading="lazy">
-                        <div class="overlay">Ver en productos</div>
+                        <div class="overlay">Ver productos</div>
                     </a>
                 </div>
                 <div class="image-container">
                     <a href="/src/pages/productos/productos.html">
                         <img src="/public/img/tokioD.jpg" alt="Image 3" class="tokio" loading="lazy">
-                        <div class="overlay">Ver en productos</div>
+                        <div class="overlay">Ver productos</div>
                     </a>
                 </div>
 
             </div>
 
-            <div class="carousel-reviews">
-                <div class="review-card">
-                    <h5>happyfreak <span>★★★★★</span></h5>
-                    <p>Set Tokio</p>
-                    <p>Me transmite un estilo oriental, el encaje me figuran como las cabezas de los dragones chinos, o
-                        como los trajes tradicionales chinos</p>
-                </div>
-                <div class="review-card">
-                    <h5>Karla <span>★★★★★</span></h5>
-                    <p>Set Tokio</p>
-                    <p>Es mi conjunto preferido. Se siente muy cómodo y se ve hermoso. Me hace sentir hermosa!! Me
-                        encanta!</p>
-                </div>
-                <div class="review-card">
-                    <h5>elenazmgo <span>★★★★★</span></h5>
-                    <p>Set Tokio</p>
-                    <p>Con esos colores visten a las "diosas" niñas del Nepal.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+            <!-- Tarjetas de reseña -->
 
-    <!-- Footer -->
-    <footer class="custom-footer">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col">
-                    <div class="copyright">
-                        <h5 class="text-left">&copy; 2024 Olga Franco Lencería - Todos los derechos reservados</h5>
+            <div id="customerCommentsCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card review-card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">happyfreak <span>★★★★★</span></h5>
+                                        <p class="card-subtitle">Set Tokio</p>
+                                        <p class="card-text">Me transmite un estilo oriental, el encaje me figuran como
+                                            las cabezas de los dragones chinos, o como los trajes tradicionales chinos.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card review-card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Karla <span>★★★★★</span></h5>
+                                        <p class="card-subtitle">Set Tokio</p>
+                                        <p class="card-text">Es mi conjunto preferido. Se siente muy cómodo y se ve
+                                            hermoso. Es muy original el estilo y los colores. Me hace sentir hermosa!!
+                                            Me encanta!.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card review-card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">elenazmgo <span>★★★★★</span></h5>
+                                        <p class="card-subtitle">Set Tokio</p>
+                                        <p class="card-text">Con esos colores visten a las "diosas" niñas del Nepal.
+                                            Puedes lavarlos libremente, sin tener que ser tan cuidadosa como con algunas
+                                            otras marcas.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card review-card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Ale55 <span>★★★★★</span></h5>
+                                        <p class="card-subtitle">Set Tokio</p>
+                                        <p class="card-text">Amé los colores tan vivos, soy una persona un poco esbelta
+                                            pero el conjunto me ha sentado increíble. Amo el estilo y el enfoque.
+                                            Recomiendo totalmente.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card review-card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Roxy <span>★★★★★</span></h5>
+                                        <p class="card-subtitle">Set Tokio</p>
+                                        <p class="card-text">Wow, nunca antes había visto un conjunto tan original y a
+                                            la vez tan cómodo, quedé fascinada con el diseño, viene tal cual lo muestran
+                                            en Instagram.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card review-card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Martha20 <span>★★★★★</span></h5>
+                                        <p class="card-subtitle">Set Tokio</p>
+                                        <p class="card-text">Me transmite un estilo oriental, el encaje me figuran como
+                                            las cabezas de los dragones chinos, o como los trajes tradicionales chinos.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="social-icons">
-                        <a href="https://wa.me/message/R75D7YSZZ7HFC1"><i class="fab fa-whatsapp"></i></a>
-                        <a href="https://www.instagram.com/olga_franco_lenceria/"><i class="fab fa-instagram"></i></a>
-                        <a href="mailto:olga_francogutierrez@hotmail.com"><i class="far fa-envelope"></i></a>
-                    </div>
-                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#customerCommentsCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#customerCommentsCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-            <div class="row">
-                <div class="col">
-                    <div class="policy">
-                        <h5><a href="./src/pages/politicas/politica.html">Política de privacidad y términos</a>
-                        </h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
 
-    <!-- Bootstrap y jQuery JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+            <!-- Footer -->
+            <footer class="custom-footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                            <div class="copyright">
+                                <h5 class="text-left">&copy; 2024 Olga Franco Lencería - Todos los derechos reservados
+                                </h5>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="social-icons">
+                                <a href="https://wa.me/message/R75D7YSZZ7HFC1"><i class="fab fa-whatsapp"></i></a>
+                                <a href="https://www.instagram.com/olga_franco_lenceria/"><i
+                                        class="fab fa-instagram"></i></a>
+                                <a href="mailto:olga_francogutierrez@hotmail.com"><i class="far fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="policy">
+                                <h5><a href="./src/pages/politicas/politica.html">Política de privacidad y términos</a>
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+            <!-- Bootstrap y jQuery JS -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+                crossorigin="anonymous"></script>
+            <script type="module" src="./js/cards.js"></script>
 
 </body>
 

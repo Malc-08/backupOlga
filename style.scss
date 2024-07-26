@@ -179,41 +179,7 @@ header {
   text-decoration: none;
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-  /*   .carousel-images {
-    flex-direction: column;
-  }
-
-  .carousel-image {
-    margin: 10px 0;
-  } */
-
-  .carousel-reviews {
-    flex-direction: column;
-  }
-
-  .review-card {
-    margin: 10px 0;
-  }
-}
-
-
-/* Reseñas del cliente */
-.carousel-reviews {
-  display: flex;
-  justify-content: center;
-}
-
-.review-card {
-  background-color: #fff9f0;
-  padding: 20px;
-  margin: 0 10px;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: 250px;
-  text-align: left;
-}
+/* Estilos de reseñas */
 
 .review-card h5 {
   font-family: "Playfair Display", serif;
@@ -227,12 +193,38 @@ header {
   margin: 5px 0;
 }
 
-.review-card span {
+/* Media Queries */
+@media (max-width: 768px) {
+  .carousel-inner {
+    flex-direction: column;
+  }
+
+  .carousel-item .row {
+    flex-direction: column;
+  }
+
+  .carousel-item .col-md-4 {
+    margin: 10px 0;
+  }
+}
+
+.card-title span {
   color: gold;
 }
 
+.card-body {
+  background-color: #fff9f0;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
 
+.carousel-item {
+  padding: 20px;
+}
 
+.card {
+  margin: 0 auto;
+}
 
 
 /* Estilos para encabezados y párrafos */
@@ -273,7 +265,7 @@ p {
   max-height: 50px;
 }
 
-.active {
+#activeI {
   text-decoration: underline #AD8D8C 5px;
 }
 

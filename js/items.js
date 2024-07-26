@@ -7,7 +7,8 @@ function addItemCard(item) {
     const itemHTML = `
        <div class="card" style="width: 20rem;">
     <div class="image-container">
-        <img src="${item.imageUrl}" class="primary-image" alt="product image">
+             <img src="${item.imageUrl}" width="180px" alt="product image" loading="lazy">
+
         <div class="hover-content">
             <img src="${item.hoverImageUrl}" class="hover-image" alt="hover image">
             <span class="modal-text" data-item='${JSON.stringify(item)}'>Ver más</span>

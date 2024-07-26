@@ -85,7 +85,8 @@ function mostrarPublicaciones() {
         const publicacionDiv = document.createElement('div');
         publicacionDiv.classList.add('publicacion');
         publicacionDiv.innerHTML = `
-            <img src="${publicacion.img}" alt="${publicacion.name}">
+            <img src="${publicacion.img}" alt="${publicacion.name}" loading="lazy">
+
             <h4>${publicacion.name}</h4>
             <p>${publicacion.description}</p>
             <p>${publicacion.price}</p>

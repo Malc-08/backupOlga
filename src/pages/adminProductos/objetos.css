@@ -32,22 +32,27 @@ html, body {
   .custom-navbar {
     background-color: #F5EBD2;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Asegura que esté por encima del contenido */
   }
   
   .navbar-brand img {
     max-height: 50px;
   }
-
+  
   .active {
     text-decoration: underline #AD8D8C 5px;
   }
   
   .navbar-nav .nav-link {
     color: #4b4949 !important;
-    font-size: 18px !important; 
+    font-size: 18px !important;
     font-weight: normal !important;
     padding: 10px 15px !important;
-    font-family: "Playfair Display", serif !important; 
+    font-family: "Playfair Display", serif !important;
   }
   
   .navbar-nav .nav-link:hover {
@@ -56,75 +61,93 @@ html, body {
   }
   
   @media (max-width: 992px) {
+    .navbar-collapse {
+      position: fixed;
+      top: 70px; /* Justo debajo de la navbar */
+      left: 0;
+      right: 0;
+      background-color: #F5EBD2;
+      z-index: 999; /* Asegúrate de que esté por encima del contenido pero debajo del footer */
+     /* overflow-y: auto;  Permite el desplazamiento si es necesario */
+    }
+  
+    
     .navbar-nav {
-        flex-direction: column; 
-        align-items: center; /* Centra los elementos en columnas */
+      text-align: center; /* Centra las opciones */
+      display: flex; /* Distribuye las opciones */
+      flex-direction: column;
+      align-items: center; /* Centra verticalmente las opciones */
+      /*margin-top: 10px; /* Opcional: Espacio adicional en la parte superior */
+      height: calc(100vh - 140px); /* Ajusta el alto del menú desplegable 100vh - 60px*/
+     /* margin-top: 0; /* Elimina el margen superior para evitar espacio innecesario */
     }
     .navbar-nav .nav-link {
-        text-align: center; 
-        padding: 10px 0; 
-        width: 100%; /* Ocupa todo el ancho disponible */
+      text-align: center;
+      padding: 10px 0;
+      /* width: 100%; Ocupa todo el ancho disponible */
     }
-  }
+    }
   
   /* Estilos del footer personalizado */
-  .custom-footer {
-    background-color: rgb(53, 2, 53);
-    color: white;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    padding: 5px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 70px; 
-  }
-  
-  .policy {
-    background-color: rgb(80, 2, 80);
-    color: white;
-    width: 100%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .policy a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .policy a:hover {
-    text-decoration: underline;
-  }
-  
-  .social-icons {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: 100%;
-  }
-  
-  .social-icons a {
-    color: white;
-    text-decoration: none;
-    font-size: 25px;
-    display: inline-block;
-    margin-left: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .social-icons a:hover {
-    color: #df24f0;
-  }
-  
-  .copyright {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: left;
-    height: 100%;
-  }
+.custom-footer {
+  background-color: rgb(53, 2, 53);
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 5px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px; 
+  z-index: 1000; /* Asegura que esté por encima del contenido en algunas situaciones */
+
+}
+
+.policy {
+  background-color: rgb(80, 2, 80);
+  color: white;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.policy a {
+  color: white;
+  text-decoration: none;
+}
+
+.policy a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+}
+
+.social-icons a {
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+  display: inline-block;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.social-icons a:hover {
+  color: #df24f0;
+}
+
+.copyright {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+  height: 100%;
+}
   
   .grid-container {
     display: grid;

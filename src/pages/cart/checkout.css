@@ -4,6 +4,39 @@ body {
   padding-bottom: 100px;
 }
 
+body {
+  background: url('/public/img/Checkout.jpeg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit; 
+  background-size: inherit;
+  background-position: inherit;
+  filter: blur(1.3px); 
+  z-index: -1;
+}
+
+/* Estilo del cuerpo con imagen de fondo */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/public/img/Checkout.jpeg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px); 
+  z-index: -1;
+}
+
 /* Estilos para encabezados y párrafos */
 h6 {
   font-size: 15px;
@@ -54,9 +87,9 @@ p {
   max-height: 50px;
 }
 
-.active {
+/* .active {
   text-decoration: underline #AD8D8C 5px;
-}
+} */
 
 .navbar-nav .nav-link {
   color: #4b4949 !important;
@@ -105,7 +138,7 @@ p {
     max-width: 500px;
     margin: 90px auto 0 !important;
     padding: 20px;
-    background-color: white;
+    background-color:rgb(245, 235, 210, 0.7);
     border-radius: 10px;
 }
 
@@ -135,6 +168,39 @@ p {
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
+}
+
+.input-with-icon {
+  position: relative;
+}
+
+.input-with-icon i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+  pointer-events: none;
+}
+
+.input-with-icon input.form-control {
+  padding-left: 30px;
+}
+
+.form-control-with-icon {
+  position: relative;
+}
+
+.form-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #6c757d; 
+}
+
+.form-control {
+  padding-left: 2.5rem; 
 }
 
 .order-summary {

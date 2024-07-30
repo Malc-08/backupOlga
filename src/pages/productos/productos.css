@@ -47,10 +47,10 @@ p {
   max-height: 50px;
 }
 
-.active {
+/* .active {
   text-decoration: underline #AD8D8C 5px;
 }
-
+ */
 .navbar-nav .nav-link {
   color: #4b4949 !important;
   font-size: 18px !important;
@@ -201,34 +201,43 @@ p {
 .modalModal {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 1050;
   left: 0;
   top: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
   overflow: auto;
   background-color: var(--background-overlay);
+  box-sizing: border-box;
 }
 
 .modal-contentModal {
   background-color: #fefefe;
   margin: var(--modal-margin) auto;
-  padding: 25px;
+  padding: 15px;
   border: 1px solid #888;
-  width: 100%;
+  width: 90%;
   max-width: 500px;
   border-radius: var(--border-radius);
   position: relative;
+  max-height: calc(100vh - 60px);
+  overflow-y: auto; 
 }
 
 .closeModal {
   color: #aaa;
   position: absolute;
-  top: 0px;
+  top: 10px;
   right: 20px;
-  font-weight: bold;
-  font-size: 24px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1050; 
 }
+
+.btn-close {
+  font-size: .8rem; 
+}
+
 
 .closeModal:hover,
 .closeModal:focus {
@@ -241,7 +250,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .carousel-control-prev-icon:hover,
@@ -372,6 +381,29 @@ p {
 
   .card-img {
       max-width: 80px;
+      margin-top: 20px; 
+  }
+
+  .modal-contentModal {
+    width: 95%; 
+    margin: 5% auto; 
+    padding: 10px;
+    max-height: calc(100vh - 60px); 
+  }
+
+  .carousel-imageModal {
+    max-height: 150px; 
+    margin-top: 20px; 
+  }
+
+  .product-infoModal {
+    margin-top: 10px; 
+    width: 100%;
+  }
+
+  .thumbnail-image {
+    width: 50px; 
+    height: 50px; 
   }
 }
 

@@ -46,6 +46,7 @@ export function setupModal() {
 
         const productInfoHTML = `
             <div class="product-infoModal">
+                <br>
                 <h2>${item.name}</h2>
                 <p>Precio: $${item.price} MXN</p>
                 <div class="form-group">
@@ -84,11 +85,11 @@ export function setupModal() {
 
         modal.style.display = "block";
 
-        const closeBtn = modal.querySelector(".closeModal");
+        const closeBtn = document.querySelector("#modalModal .closeModal");
         closeBtn.addEventListener("click", function () {
-            modal.style.display = "none";
+            document.getElementById("modalModal").style.display = "none";
         });
-
+        
         const addToCartButton = productDetails.querySelector("#add-to-cartModal");
         addToCartButton.addEventListener("click", function () {
             const selectedSize = document.getElementById("sizeModal").value;

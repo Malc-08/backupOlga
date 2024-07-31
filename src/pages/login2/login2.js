@@ -38,13 +38,13 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log(`Se enviará un correo electrónico de restablecimiento de contraseña a: ${email}`);
 
         // Configura Email.js y envía el correo electrónico
-        emailjs.init("lenceriolga@outlook.com"); // Reemplaza con tu User ID de Email.js
+        emailjs.init("eToDepjFcMp--P6CW"); // Reemplaza con tu User ID de Email.js
 
-        emailjs.send("Yservice_5v5qgrk", "template_8kp96gr", {
+        emailjs.send("service_bfi1ahv", "template_3gfceji", {
             to_email: email,
         }).then(function(response) {
             console.log('Correo electrónico enviado con éxito:', response);
-            alert(`Se enviará un correo electrónico a: ${email}`);
+            alert(`Se enviará un correo electrónico a ${email} para restablecer contraseña`);
             form.reset(); // Limpia el formulario después del envío
         }, function(error) {
             console.error('Error al enviar el correo electrónico:', error);

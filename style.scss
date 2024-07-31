@@ -375,3 +375,22 @@ p {
   text-align: left;
   height: 100%;
 }
+.header-animation {
+  position: relative;
+  overflow: hidden;
+}
+
+.header-animation .container {
+  white-space: nowrap; /* Evita que el texto se rompa */
+  animation: move-text 13s linear infinite; /* Ajusta la duración y el tipo de animación */
+}
+
+@keyframes move-text {
+  0% {
+      transform: translateX(100%); /* Inicia fuera del área visible hacia la derecha */
+  }
+  100% {
+      transform: translateX(-100%); /* Termina fuera del área visible hacia la izquierda */
+  }
+}
+

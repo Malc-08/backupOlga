@@ -1,8 +1,8 @@
 /* Estilos básicos para cuerpo y html */
 
 body, html {
-  height: 140%;
-  width: 95%;
+  height: 100%;
+  width: 100%;
   margin: 0;
   display: flex;
   justify-content: center; /* Centrar horizontalmente */
@@ -126,6 +126,7 @@ body {
 h2 {
   margin-bottom: 20px;
   font-family: "Playfair Display", serif;
+  color: #d9edf7;
 }
 
 

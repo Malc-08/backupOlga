@@ -86,7 +86,7 @@ function postContactForm(formData) {
         emailjs.init("eToDepjFcMp--P6CW"); 
     })();
 
-    emailjs.send("service_uzjz2mc", "template_nlhxwj7", formData) 
+    emailjs.send("service_pskjqnh", "template_ytr0bqp", formData) 
         .then(function(response) {
             console.log('SUCCESS!', response.status, response.text);
             showSuccessMessage();

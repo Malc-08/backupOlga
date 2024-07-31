@@ -26,7 +26,7 @@ export function setupModal() {
                         <img src="${item.hoverImageUrl}" class="carousel-imageModal" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="/public/img/Tablamedidas.jpg" class="carousel-imageModal" alt="Tabla de medidas">
+                        <img src="/img/Tablamedidas.jpg" class="carousel-imageModal" alt="Tabla de medidas">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsModal" data-bs-slide="prev">
@@ -44,7 +44,7 @@ export function setupModal() {
             <div class="thumbnails-container">
                 <img src="${item.imageUrl}" class="thumbnail-image" data-bs-target="#carouselExampleControlsModal" data-bs-slide-to="0" alt="...">
                 <img src="${item.hoverImageUrl}" class="thumbnail-image" data-bs-target="#carouselExampleControlsModal" data-bs-slide-to="1" alt="...">
-                <img src="/public/img/Tablamedidas.jpg" class="thumbnail-image" data-bs-target="#carouselExampleControlsModal" data-bs-slide-to="2" alt="Tabla de medidas">
+                <img src="/img/Tablamedidas.jpg" class="thumbnail-image" data-bs-target="#carouselExampleControlsModal" data-bs-slide-to="2" alt="Tabla de medidas">
             </div>
         `;
 

@@ -52,7 +52,9 @@ export function setupModal() {
             <div class="product-infoModal">
                 <br>
                 <h2>${item.name}</h2>
+                <br>
                 <p>Precio: $${item.price} MXN</p>
+                <br>
                 <div class="form-group">
                     <label for="sizeModal">Talla:</label>
                     <select id="sizeModal" class="form-select">
@@ -67,6 +69,7 @@ export function setupModal() {
                     <label for="unitsModal">Cantidad:</label>
                     <input type="number" id="unitsModal" class="form-control" value="1" min="1">
                 </div>
+                <br>
                 <button id="add-to-cartModal" class="btn btn-primary">Agregar al Carrito</button>
             </div>
         `;
